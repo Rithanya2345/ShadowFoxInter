@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - WatchStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>WatchStore Checkout</h1>
+    <div><a href="index.html" class="btn secondary">Back to Store</a></div>
+  </header>
+
+  <div class="container checkout-container">
+
+    <div class="checkout-left">
+      <h2>Order Summary</h2>
+      <div id="orderSummary" class="order-summary">
+        <!-- Cart items will be rendered here -->
+      </div>
+      <p class="total-amount"><strong>Total: ₹<span id="summaryTotal">0</span></strong></p>
+    </div>
+
+    <div class="checkout-right">
+      <h2>Shipping & Payment</h2>
+      <form id="checkoutForm" class="checkout-form">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <textarea id="address" required></textarea>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" required>
+        </div>
+        <div>
+          <label for="payment">Payment Method</label>
+          <select id="payment" required>
+            <option value="">Select</option>
+            <option value="cod">Cash on Delivery</option>
+            <option value="card">Credit/Debit Card</option>
+            <option value="upi">UPI</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Place Order</button>
+        <p id="orderMessage" class="success"></p>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
