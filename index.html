@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>WatchStore</h1>
+    <div>
+      <span class="cart-icon" onclick="viewCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('Digital')">Digital</button>
+      <button onclick="filterProducts('Analog')">Analog</button>
+      <button onclick="filterProducts('Smart')">Smart</button>
+      <input type="text" id="search" placeholder="Search..." oninput="searchProducts()">
+    </div>
+
+    <div id="productList">
+      <!-- Products will be rendered here -->
+    </div>
+  </div>
+
+  <div id="cartSection">
+    <h2>Shopping Cart <button class="close-btn" onclick="closeCart()">X</button></h2>
+    <div id="cartItems"></div>
+    <p>Total: ₹<span id="totalPrice">0</span></p>
+    <button class="btn" onclick="proceedToCheckout()">Checkout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
